@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Breaking bad personajes</h1>
+    <div class="row">
+    
+        <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar personaje"
+        (input)="filter($event)"
+        
+        
+        />
+
+        <div class="row">
+            <div *ngFor="let personaje of personajes">
+                <app-cards [personaje]="personaje"></app-cards>
+            </div>
+        </div>
+</div>

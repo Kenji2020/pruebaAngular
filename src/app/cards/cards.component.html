@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{personaje.img}}" alt="{{personaje.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{personaje.name}}</h5>
+      <p class="card-text">{{personaje.occupation}}</p>
+      <a href="#" class="btn btn-primary" [ngClass]="
+        {
+          'btn-danger': personaje.status !== 'Alive',
+          'btn-success': personaje.status === 'Alive'
+        }">{{personaje.status}}</a>
+        <p>
+          Birthday: {{personaje.birthday}},
+          <br>
+          Nickname: {{personaje.nickname}}, 
+          <br>
+          Potrayed: {{personaje.portrayed}}
+        </p>
+    </div>
+  </div>
